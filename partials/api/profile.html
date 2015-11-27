@@ -1,0 +1,35 @@
+<md-content class="flex ng-scope md-cyan-theme" scroll-shrink = "true" ng-controll>
+<div id="admin-panel-content-view">
+  <div class="full-image-background mb-bg-01 padding-20 padding-top-200 overlay-gradient-30 layout layout-row layout-align-start-center ng-scope">
+      <div class="margin-right-20">
+          <img src="public/images/avatar-5.png" alt="girl-avatar" class="make-round" width="100">
+      </div>
+      <div class="text-light">
+          <h3 class="font-weight-600 margin-bottom-0 text-light">Suman Kotagiri</h3>
+          <p class="font-weight-300 margin-top-0">Edit your name, avatar etc</p>
+       </div>
+  </div>
+  <div ng-controller="TabsCtrl">
+    <!-- <md-toolbar>
+      <h1 class="md-headline" style="padding-left: 24px;">Tabs Example</h1>
+    </md-toolbar> -->
+    <md-tabs md-border-bottom md-dynamic-height>
+      <md-tab label="Profile">
+        <md-content class="md-padding">
+          <div ng-include="'partials/api/setProfile.html'"></div>
+        </md-content>
+      </md-tab>
+      <md-tab label="Password">
+        <md-content class="md-padding">
+          <div ng-include="'partials/api/setPassword.html'"></div>
+        </md-content>
+      </md-tab>
+      <md-tab label="Notifications">
+        <md-content class="md-padding">
+          This is the Notifications tab.
+        </md-content>
+      </md-tab>
+    </md-tabs>
+  </div>
+</div>
+</md-content>

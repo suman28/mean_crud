@@ -1,0 +1,53 @@
+<div ng-controller="updateEntryCtrl">
+
+  <div ng-show="false" id="my-breadcrumbs" style="width:100%">
+ <ul>
+ <li><a href="#">Home</a></li>
+ <li><a href="#">About</a></li>
+ <li><a href="#">Product</a></li>
+ <li><a href="#">Contact</a></li>
+
+ </ul>
+</div>
+<div style="content:'';border-top:20px solid transparent;border-bottom:20px solid transparent;border-left:20px solid #ddd;">hiii</div>
+
+
+  <div layout="column" ng-show="visible">
+    <h3 class="md-title" layout-padding="">Edit Entries here</h3>
+    <md-content layout-padding class="autoScroll" >
+      <md-card>
+          <md-card-content>
+            <md-input-container class="md-icon-float" >
+                <label>Name</label>
+              <md-icon md-svg-src="public/images/ic_person_black_24px.svg" class="name"></md-icon>
+
+              <input ng-model="myData.name" type="text" placeholder="Name" >
+            </md-input-container>
+            <md-input-container md-no-float  class="md-icon-float">
+              <label>Phone</label>
+              <md-icon md-svg-src="public/images/ic_phone_black_24px.svg"></md-icon>
+              <input ng-model="myData.phone" type="text" placeholder="Phone Number">
+            </md-input-container>
+            <md-input-container  class="md-icon-float">
+              <!-- Use floating placeholder instead of label -->
+                <label>email</label>
+              <md-icon md-svg-src="public/images/ic_email_black_24px.svg" class="email"></md-icon>
+
+              <input ng-model="myData.email" type="email" placeholder="Email" ng-required="true">
+            </md-input-container>
+            <md-input-container md-no-float  class="md-icon-float">
+                <label>Address</label>
+              <md-icon md-svg-src="public/images/ic_place_black_24px.svg" style="display:inline-block;"></md-icon>
+
+              <input ng-model="myData.address" type="text" placeholder="Address" >
+            </md-input-container>
+          </md-card-content>
+          <div class="md-actions" layout="row" layout-align="end center">
+            <md-button class="md-raised md-primary" ng-click="updateContact()">Update Contact</md-button>
+            <md-button ng-click = "clear()">Clear</md-button>
+          </div>
+        </md-card>
+
+    </md-content>
+  </div>
+</div>

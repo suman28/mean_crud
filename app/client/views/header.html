@@ -1,0 +1,57 @@
+      <md-toolbar ng-controller="ResourceController as ctrl">
+        <div class="md-toolbar-tools md-whiteframe-z1">
+          <md-button class="md-icon-button" aria-label="Settings" ng-click="toggleLeft()">
+            <img src="public/images/capitallogo.png"/ height=40px; width=40px >
+          </md-button>
+          <!-- <div>
+           <md-button ng-click="toggleLeft()">
+             Toggle left
+           </md-button>
+         </div> -->
+
+          <h2>
+            <span hide-sm>CRUD app using Angular Resource</span>
+          </h2>
+          <span flex></span>
+          <div>
+            <md-button ng-click="toggleRight()" class="navbar-button">
+              <i class="material-icons">message</i>
+            </md-button>
+          </div>
+          <div>
+            <md-button ng-click="toggleRight()" class="navbar-button">
+              <i class="material-icons">notifications</i>
+            </md-button>
+          </div>
+          <md-menu md-position-mode="target-right target" >
+           <md-button aria-label="Open demo menu" class="image-button" ng-click="$mdOpenMenu($event)" ng-mouseenter="ctrl.openMenu($mdOpenMenu, $event)">
+               <div>
+                 <div><img src="public/images/avatar5.png" class="smcircle-img" style="float:left; "> </div>
+                 <div style="margin-left:50px;"><span class="user_name">Suman</span></div>
+               </div>
+           </md-button>
+
+           <md-menu-content width="4" >
+             <md-menu-item >
+               <md-button ng-click="ctrl.redial($event)">
+                <i class="material-icons md-white-cyan-theme account_menu_icon">settings</i>
+                 Settings
+               </md-button>
+              </md-menu-item>
+               <md-menu-item >
+               <md-button ng-href="#/setPassword">
+                <i class="material-icons md-white-cyan-theme account_menu_icon">person_outline</i>
+                 Profile
+               </md-button>
+              </md-menu-item>
+               <md-divider></md-divider>
+               <md-menu-item >
+               <md-button ng-click="ctrl.redial($event)">
+                <i class="material-icons md-white-cyan-theme account_menu_icon">power_settings_new</i>
+                 Logout
+               </md-button>
+             </md-menu-item>
+           </md-menu-content>
+         </md-menu>
+        </div>
+      </md-toolbar>

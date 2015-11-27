@@ -1,0 +1,126 @@
+
+<div layout="column" ng-controller="menuController">
+   <section layout="row" flex>
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2"
+    md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" id="sidenav-left">
+     <!-- <md-toolbar class="md-theme-light"> -->
+     <header class="nav-header" hide-sm hide-gt-sm show-gt-md show-md>
+       <a ng-href="#/" class="docs-logo" href="#/">
+         <img src="public/images/angular-logo.svg" alt="" class="angular-logo" >
+         <h1 class="docs-logotype md-heading">Angular Material</h1>
+       </a>
+     </header>
+       <!-- <img src="public/images/angular-logo.svg" class="angular-logo"/>
+       <h1 class="md-toolbar-tools" style="text-align:center;color:white;">Angular Material</h1> -->
+     <!-- </md-toolbar> -->
+      <div ng-controller="LeftCtrl" layout-padding="" class="sidenav-left-content">
+        <!-- add `multiple` attribute to allow multiple sections to open at once -->
+        <v-accordion class="vAccordion--default" multiple>
+
+          <!-- add expanded attribute to open the section -->
+          <v-pane>
+
+            <v-pane-header>
+              <md-button  md-no-ink class="sidenav-btns">
+                <i class="material-icons">dashboard</i>
+                <span class="sidenav-menu-item">Dashboard</span>
+              </md-button>
+            </v-pane-header>
+
+            <v-pane-content>
+              <md-button class="sidenav-sub-btns">Dashboard1</md-button>
+              <md-button class="sidenav-sub-btns">Dashboard2</md-button>
+              <md-button class="sidenav-sub-btns">Dashboard3</md-button>
+            </v-pane-content>
+          </v-pane>
+
+          <v-pane>
+            <v-pane-header>
+              <md-button  md-no-ink class="sidenav-btns">
+                <i class="material-icons">insert_chart</i>
+                <span class="sidenav-menu-item">Charts</span>
+              </md-button>
+            </v-pane-header>
+
+            <v-pane-content>
+              <md-button class="sidenav-sub-btns">Chart1</md-button>
+              <md-button class="sidenav-sub-btns">Chart2</md-button>
+            </v-pane-content>
+          </v-pane>
+          <v-pane>
+            <v-pane-header>
+              <md-button  md-no-ink class="sidenav-btns">
+                <i class="material-icons">menu</i>
+                <span class="sidenav-menu-item">Menu</span>
+              </md-button>
+            </v-pane-header>
+
+            <v-pane-content>
+              <md-button class="sidenav-sub-btns">Menu1</md-button>
+              <md-button class="sidenav-sub-btns">Menu2</md-button>
+              <md-button class="sidenav-sub-btns">Menu3</md-button>
+            </v-pane-content>
+          </v-pane>
+          <v-pane>
+            <v-pane-header>
+              <md-button  md-no-ink class="sidenav-btns">
+                <i class="material-icons">assignment</i>
+                <span class="sidenav-menu-item">Tables</span>
+              </md-button>
+            </v-pane-header>
+
+            <v-pane-content>
+              <md-button class="sidenav-sub-btns">Table1</md-button>
+              <md-button class="sidenav-sub-btns">Table2</md-button>
+              <md-button class="sidenav-sub-btns">Table3</md-button>
+            </v-pane-content>
+          </v-pane>
+          <v-pane>
+            <v-pane-header>
+              <md-button  md-no-ink class="sidenav-btns">
+                <i class="material-icons">new_releases</i>
+                <span class="sidenav-menu-item">Elements</span>
+              </md-button>
+            </v-pane-header>
+
+            <v-pane-content>
+              <md-button class="sidenav-sub-btns">Element1</md-button>
+              <md-button class="sidenav-sub-btns">Element2</md-button>
+              <md-button class="sidenav-sub-btns">Element3</md-button>
+            </v-pane-content>
+          </v-pane>
+
+          <v-pane expanded>
+            <v-pane-header>
+              <md-button  md-no-ink class="sidenav-btns">
+                <i class="material-icons">contacts</i>
+                <span class="sidenav-menu-item">Contacts</span>
+              </md-button>
+            </v-pane-header>
+
+            <v-pane-content>
+              <md-button class="sidenav-sub-btns" ng-href="#/addEntry">Add Contact</md-button>
+              <!-- <md-button class="sidenav-sub-btns">Update Contact</md-button> -->
+              <md-button class="sidenav-sub-btns" ng-href="#/viewEntries">View Entries</md-button>
+            </v-pane-content>
+          </v-pane>
+
+        </v-accordion>
+      </div>
+    </md-sidenav>
+  </section>
+</div>
+
+<md-sidenav class="md-sidenav-right md-whiteframe-z2"
+md-component-id="right"> <md-toolbar
+class="md-theme-light">
+<h1 class="md-toolbar-tools">Sidenav Right</h1>
+</md-toolbar> <md-content ng-controller="RightCtrl" layout-padding="">
+<form>
+<md-input-container> <label for="testInput">Test
+  input</label> <input type="text" id="testInput" ng-model="data"
+  md-sidenav-focus=""> </md-input-container>
+</form>
+<md-button ng-click="close()" class="md-primary"> Close
+Sidenav Right </md-button> </md-content>
+</md-sidenav>

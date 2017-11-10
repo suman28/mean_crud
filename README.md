@@ -3,9 +3,9 @@ This application is created by using MEAN(MongoDB,Express,Angular and Node) stac
 
 Steps to follow:
 
-1)Download and unzip the folder
+1)Download and unzip the folder (or clone the repo)
 2)Make sure you have MongoDB and node installed in your machine.
 3)Install dependencies by running the below command:
 	npm install
-4)open the browser and run http://localhost:7878
+4)run node server.js and open the browser @ http://localhost:7878
 
